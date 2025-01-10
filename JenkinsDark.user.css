@@ -1,0 +1,93 @@
+/* ==UserStyle==
+@name         Jenkins Dark
+@namespace    Rakanbda
+@author       Rakambda
+@description  Dark theme for Jenkins Blue Ocean (based on https://userstyles.world/api/style/19147)
+@version      20250110.1
+@license      NONE
+@preprocessor uso
+==/UserStyle== */
+
+@-moz-document regexp("https://.*?/jenkins2/blue/.*") {
+    /* 
+    === COLORS ===
+    Sucess: #3C581C
+    Failure: #6B262A
+    Default: #254871
+    Dark bg: #2B2B2B
+    Light bg: #555555
+    Text: #D5D5D5
+    */
+    
+    /* Headers */
+    .BasicHeader--default {
+        background: #254871;
+    }
+
+    .BasicHeader--success {
+        background: #3C581C;
+    }
+
+    .BasicHeader--failure {
+        background: #6B262A;
+    }
+
+    .BasicHeader--running {
+        background: #274B75;
+    }
+
+    .BasicHeader--paused {
+        background: #18758E;
+    }
+
+    /* Main content */
+    .FullScreen-contents, .Site, .Site-content, .Site-footer {
+        background: #2B2B2B;
+        color: #D5D5D5;
+    }
+
+    circle.halo {
+        stroke: #949393;
+    }
+    
+    .svgResultStatus > circle {
+        stroke: none;
+    }
+
+    /* Logs */
+    .logConsole {
+        background-color: #555555;
+    }
+    
+    .JTable-cell {
+        color: #D5D5D5;
+    }
+    
+    .autocomplete {
+        background-color: #666666;
+    }
+    
+    .autocomplete::placeholder {
+        color: #aaaaaa;
+    }
+
+    .result-item-head {
+        background-color: #555555;
+        border: solid 1px #555555;
+        color: #D5D5D5;
+    }
+
+    .result-item-title {
+        background-color: #555555;
+    }
+
+    .result-bg.success {
+        background: #3C581C;
+        border-bottom: solid 1px #3C581C;
+    }
+
+    .result-bg.failure {
+        background: #6B262A;
+        border-bottom: solid 1px #6B262A;
+    }
+}
